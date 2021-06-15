@@ -18,8 +18,8 @@ export KUBEVIRT_STORAGE=rook-ceph-default
 
 echo "Installing CDI"
 export CDI_RELEASE=v1.35.0
-kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/$CDI_RELEASE/cdi-operator.yaml
-kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/$CDI_RELEASE/cdi-cr.yaml
+kubectl apply -f https://github.com/kubevirt/containerized-data-importer/releases/download/$CDI_RELEASE/cdi-operator.yaml
+kubectl apply -f https://github.com/kubevirt/containerized-data-importer/releases/download/$CDI_RELEASE/cdi-cr.yaml
 
 
 echo "Installing KubeVirt"
